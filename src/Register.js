@@ -1,0 +1,52 @@
+// import React from 'react'
+// import 'bootstrap/dist/css/bootstrap.min.css'
+import './Register.css'
+import  { Link } from 'react-router-dom'
+
+export default function register() {
+  return (
+    <div className='wrapper bg-dark d-flex align-items-center justify-content-center w-100'>
+        <div className='login rounded'>
+            <h2 className='mb-3'>Login</h2>
+            <form className='needs-validation'> 
+                <div className='form-group was-validated mb-2'>
+                    <label htmlFor='email' className='form-label'>Email Address</label>
+                    <input type="email" className='form-control' required></input>
+                    <div className='invalid-feedback'>
+                        Please Enter Your Email
+                    </div>
+                </div>
+                <div className='form-group was-validated mb-2'>
+                    <label htmlFor='password' className='form-label'>Password</label>
+                    <input type="password" className='form-control'></input>
+                    <div className='invalid-feedback'>
+                        Please Enter Your Password
+                    </div>
+                </div>
+                <div className='form-group was-validated mb-2'>
+                    <label htmlFor='password' className='form-label'>Re-Enter Password</label>
+                    <input type="password" className='form-control'></input>
+                    <div className='invalid-feedback'>
+                        Please Enter Your Password
+                    </div>
+                </div>
+                {/* <div className='form-group form-check mb-2'>
+                    <input type="checkbox" className='form-check-input'></input>
+                    <label htmlFor='check' className='form-check-label'>Remember me</label>   
+                </div>
+                <button type='submit' className='btn btn-success w-100 mt-2'>SIGN IN</button> */}
+                <Link to = "/login">
+                    <button type='submit' className='btn btn-success w-100 mt-2'>REGISTER</button>
+                </Link>
+                
+            </form>
+            {/* <div className='alt-login'>
+                <div className='google'></div>
+                <div className='github'></div>
+            </div> */}
+        </div>
+    </div>
+  )
+}
+
+
